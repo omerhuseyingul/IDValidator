@@ -77,10 +77,10 @@ namespace IDValidator
                     for (int g = 0; g < id.Length - 1; g++)
                     {
                         res = res + Convert.ToInt32(param[g].ToString());
-                        tempRes = Convert.ToString(res);
+                        tempRes = Convert.ToString(res % 10);
                     }
 
-                    if (tempRes[1].ToString() == param[10].ToString())
+                    if (tempRes.ToString() == param[10].ToString())
                     {
                         return true;
                     }
